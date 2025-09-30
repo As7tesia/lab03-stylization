@@ -1,5 +1,13 @@
 # Lab 05 - Stylization!
-Let's practice adding stylization to a 3D scene using Unity's shader graph!
+---
+I asked Rui if I could do this lab in unreal and she said yes.
+
+But the more I do it the more I realized how cooked it is to do stylization in unreal. I had no control over their rendering pipeline and just had to do everything in a post process shader.
+
+![Puzzle 1 & 2](./SC2.jpg)
+![Puzzle 3](./SC1.jpg)
+![Node Graph](./nodegraph.jpg)
+
 
 ## Introduction
 We will be stylizing a "toon" look by creating a shader in Unity that supports shadows and multiple lights in real-time! In the process, you will gain some familiarity with Unity’s shader graph.
