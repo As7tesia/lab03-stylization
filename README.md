@@ -2,10 +2,13 @@
 ---
 I asked Rui if I could do this lab in unreal and she said yes.
 
-But the more I do it the more I realized how cooked it is to do stylization in unreal. I had no control over their rendering pipeline and just had to do everything in a post process shader.
+But the more I do it the more I realized how cooked it is to do stylization in unreal. I had no control over their rendering pipeline and just had to do everything in a post process shader. I managed to get it kinda working by getting the different render AOVs from the Scene Texture, then compositing base color and scene color together using basically a (optionalled smoothed out) step function that maps light intensity into different bands.
 
-![Puzzle 1 & 2](./SC2.jpg)
-![Puzzle 3](./SC1.jpg)
+Note that because its all done with post-process, everything reacts to light, so the regular cell-shading looks a lot better with skylight turned on, however, doing so will make the ground plane too bright above the shadow threshold that the shadow lines won't appear. So shadow lines work better without skylight. (I could have set up lightlinking....but perhaps I'll save it for the actual homework)
+
+![Without Skylight](./SC1.jpg)
+![With Skylight](./SC1_2.jpg)
+![Puzzle 3](./SC2.jpg)
 ![Node Graph](./nodegraph.jpg)
 
 
